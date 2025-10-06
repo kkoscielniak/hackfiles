@@ -1,0 +1,9 @@
+- clean: ["~"]
+
+- defaults: 
+    link:
+        create: true
+
+- link: 
+    ~/.zshrc: zshrc 
+    
