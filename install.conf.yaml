@@ -8,4 +8,6 @@
     ~/.zshrc: zshrc
     ~/.config/tmux:
         path: config/tmux
+    ~/.config/ghostty:
+        path: config/ghostty
     
