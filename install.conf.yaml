@@ -8,6 +8,8 @@
     ~/.zshrc: zshrc
     ~/.config/tmux:
         path: config/tmux
+    ~/.config/aerospace:
+        path: config/aerospace
     ~/.config/ghostty:
         path: config/ghostty
     
