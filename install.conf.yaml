@@ -10,6 +10,8 @@
         path: config/tmux
     ~/.config/aerospace:
         path: config/aerospace
+    ~/.config/borders:
+        path: config/borders
     ~/.config/ghostty:
         path: config/ghostty
     
