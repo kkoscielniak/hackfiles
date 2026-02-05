@@ -34,7 +34,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1.hack", "2", "3.chat", "4.music", "5", "6", "7", "8", "9"]
+persistent-workspaces = ["1.hack", "2.web", "3.map", "4.chat", "5.music", "6", "7", "8", "9", "TTY"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -101,25 +101,27 @@ on-mode-changed = []
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1.hack'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3.chat'
-    alt-4 = 'workspace 4.music'
-    alt-5 = 'workspace 5'
+    alt-2 = 'workspace 2.web'
+    alt-3 = 'workspace 3.map'
+    alt-4 = 'workspace 4.chat'
+    alt-5 = 'workspace 5.music'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
+    alt-0 = 'workspace TTY'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1.hack'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3.chat'
-    alt-shift-4 = 'move-node-to-workspace 4.music'
-    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-2 = 'move-node-to-workspace 2.web'
+    alt-shift-3 = 'move-node-to-workspace 3.map'
+    alt-shift-4 = 'move-node-to-workspace 4.chat'
+    alt-shift-5 = 'move-node-to-workspace 5.music'
     alt-shift-6 = 'move-node-to-workspace 6'
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-0 = 'move-node-to-workspace TTY' 
 
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
