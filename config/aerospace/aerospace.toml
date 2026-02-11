@@ -145,3 +145,13 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'Slack'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 4.chat']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'Spotify'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 5.music']
