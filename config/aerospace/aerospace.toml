@@ -44,14 +44,6 @@ on-mode-changed = []
 [key-mapping]
     preset = 'qwerty'
 
-# Gaps between windows (inner-*) and between monitor edges (outer-*).
-# Possible values:
-# - Constant:     gaps.outer.top = 8
-# - Per monitor:  gaps.outer.top = [{ monitor.main = 16 }, { monitor."some-pattern" = 32 }, 24]
-#                 In this example, 24 is a default value when there is no match.
-#                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
-#                 See:
-#                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
     inner.horizontal = 20
     inner.vertical =   20
@@ -124,18 +116,13 @@ on-mode-changed = []
     alt-shift-0 = 'move-node-to-workspace TTY' 
 
     alt-tab = 'workspace-back-and-forth'
-    # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
     cmd-h = [] # Disable "hide application"
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
     alt-slash = 'layout tiles horizontal vertical'
 
-
-# 'service' binding mode declaration.
-# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
@@ -148,10 +135,17 @@ on-mode-changed = []
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'Slack'
-    check-further-callbacks = true
+    run = ['move-node-to-workspace 4.chat']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.teams2'
+    run = ['move-node-to-workspace 4.chat']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.Outlook'
     run = ['move-node-to-workspace 4.chat']
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'Spotify'
-    check-further-callbacks = true
     run = ['move-node-to-workspace 5.music']
+
