@@ -138,7 +138,7 @@ on-mode-changed = []
     run = ['move-node-to-workspace 4.chat']
 
 [[on-window-detected]]
-    if.app-id = 'com.microsoft.teams2'
+    if.app-name-regex-substring = 'Microsoft Teams'
     run = ['move-node-to-workspace 4.chat']
 
 [[on-window-detected]]
@@ -149,3 +149,6 @@ on-mode-changed = []
     if.app-name-regex-substring = 'Spotify'
     run = ['move-node-to-workspace 5.music']
 
+[[on-window-detected]]
+    if.app-name-regex-substring = 'MacPass'
+    run = ['layout floating']
