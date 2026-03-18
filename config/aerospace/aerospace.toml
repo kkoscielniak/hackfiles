@@ -152,3 +152,7 @@ on-mode-changed = []
 [[on-window-detected]]
     if.app-name-regex-substring = 'MacPass'
     run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'Finder'
+    run = ['layout floating']
