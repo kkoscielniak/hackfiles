@@ -25,16 +25,13 @@ default-root-container-orientation = 'auto'
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
-# You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
-# Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
-# Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
 
 # List of workspaces that should stay alive even when they contain no windows,
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1.hack", "2.web", "3.map", "4.chat", "5.music", "6", "7", "8", "9", "TTY"]
+persistent-workspaces = ["1.hack", "2.web", "3.map", "4.chat", "5.music", "6", "7", "8.call", "9", "TTY"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -99,21 +96,21 @@ on-mode-changed = []
     alt-5 = 'workspace 5.music'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
+    alt-8 = 'workspace 8.call'
     alt-9 = 'workspace 9'
     alt-0 = 'workspace TTY'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1.hack'
-    alt-shift-2 = 'move-node-to-workspace 2.web'
-    alt-shift-3 = 'move-node-to-workspace 3.map'
-    alt-shift-4 = 'move-node-to-workspace 4.chat'
-    alt-shift-5 = 'move-node-to-workspace 5.music'
-    alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
-    alt-shift-8 = 'move-node-to-workspace 8'
-    alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-0 = 'move-node-to-workspace TTY' 
+    alt-shift-1 = ['move-node-to-workspace 1.hack', 'workspace 1.hack']
+    alt-shift-2 = ['move-node-to-workspace 2.web', 'workspace 2.web']
+    alt-shift-3 = ['move-node-to-workspace 3.map', 'workspace 3.map']
+    alt-shift-4 = ['move-node-to-workspace 4.chat', 'workspace 4.chat']
+    alt-shift-5 = ['move-node-to-workspace 5.music', 'workspace 5.music']
+    alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+    alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+    alt-shift-8 = ['move-node-to-workspace 8.call', 'workspace 8.call']
+    alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+    alt-shift-0 = ['move-node-to-workspace TTY', 'workspace TTY']
 
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -150,9 +147,9 @@ on-mode-changed = []
     run = ['move-node-to-workspace 5.music']
 
 [[on-window-detected]]
-    if.app-name-regex-substring = 'MacPass'
+    if.app-name-regex-substring = 'MacPass|Finder'
     run = ['layout floating']
 
-[[on-window-detected]]
-    if.app-name-regex-substring = 'Finder'
-    run = ['layout floating']
+# [[on-window-detected]]
+#     if.app-name-regex-substring = 'Finder'
+#     run = ['layout floating']
