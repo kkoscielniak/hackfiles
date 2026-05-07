@@ -38,6 +38,11 @@ persistent-workspaces = ["1.hack", "2.web", "3.map", "4.chat", "5.music", "6", "
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 on-mode-changed = []
 
+exec-on-workspace-change = [
+    '/bin/zsh', '-c',
+    '~/.config/aerospace/pip-aot.sh'
+]
+
 [key-mapping]
     preset = 'qwerty'
 
@@ -150,6 +155,4 @@ on-mode-changed = []
     if.app-name-regex-substring = 'MacPass|Finder'
     run = ['layout floating']
 
-# [[on-window-detected]]
-#     if.app-name-regex-substring = 'Finder'
-#     run = ['layout floating']
+
