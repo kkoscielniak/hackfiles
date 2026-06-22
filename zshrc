@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-
 if [[ -f "$HOME/.dotfiles/env" ]]; then
 	source "$HOME/.dotfiles/env"
 fi
@@ -41,7 +40,7 @@ zstyle ':omz:plugins:*' aliases no
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux zoxide)
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_DEFAULT_SESSION_NAME=trickster
 
 # zstyle ':omz:plugins:git' aliases no
@@ -58,3 +57,7 @@ else
 fi
 
 $HOME/.dotfiles/aliases.zsh
+
+# pipx configuration
+eval "$(register-python-argcomplete pipx)"
+export PATH="$PATH:/Users/kkoscielniak/.local/bin"
