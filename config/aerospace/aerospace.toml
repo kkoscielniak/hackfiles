@@ -152,7 +152,7 @@ exec-on-workspace-change = [
     run = ['move-node-to-workspace 5.music']
 
 [[on-window-detected]]
-    if.app-name-regex-substring = 'MacPass|Finder'
+    if.app-name-regex-substring = 'MacPass|Finder|Keka'
     run = ['layout floating']
 
 
